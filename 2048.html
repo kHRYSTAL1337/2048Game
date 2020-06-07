@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+    <script>
+        /*
+         Пример игры: http://gabrielecirulli.github.io/2048/ только в нем ходы делаются с помощью клавиатуры
+         Правила игры.
+         В каждом раунде появляется плитка номинала «2» (с вероятностью 90 %) или «4» (с вероятностью 10 %).
+         В начале игры на поле находится 1 клетка.
+         Чтобы сделать ход, игрок должен зажать левую кнопку мыши и переместить курсор в одном из четырех направлений.
+         Все клетку с числами при этом сдивгаются в этом направлении до упора.
+         Если при этом две плитки одного номинала «налетают» одна на другую, то они слипаются в одну,
+         номинал которой равен сумме соединившихся плиток.
+         После каждого хода на свободной секции поля появляется новая плитка номиналом «2» или «4».
+         Если при нажатии кнопки местоположение плиток или их номинал не изменится, то ход не совершается.
+         Тоесть новую плитку в этом случае добавлять не нужно.
+         За каждое соединение игровые очки увеличиваются на номинал получившейся плитки.
+         Игра заканчивается поражением, если после очередного хода невозможно совершить действие.
+
+         
+         */
+        // $(document).ready(function () {
+        //     var $playfield = $('#playfield');
+        //     var mousedown = false;
+        //     $playfield.unbind('mousedown').mousedown(function () {
+        //         mousedown = true;
+        //     });
+        //     $playfield.unbind('mouseup').mouseup(function () {
+        //         mousedown = false;
+        //     });
+        // });
+    </script>
+</head>
+
+<body>
+
+    <h1>2048 | ¯\_(ツ)_/¯ | kHRYSTAL1337</h1>
+    <div class="scorebox">
+        <div class="score">0</div>
+    </div>
+    <div class="container">
+
+
+        <div id="playfield"></div>
+
+    </div>
+    <script src="jqueryHelper.js"></script>
+    <script src="helperFunction.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
